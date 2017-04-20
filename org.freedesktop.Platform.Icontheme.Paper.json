@@ -1,0 +1,35 @@
+{
+    "id": "org.freedesktop.Platform.Icontheme.Paper",
+    "branch": "1.0",
+    "runtime": "org.freedesktop.Sdk",
+    "build-extension": true,
+    "sdk": "org.freedesktop.Sdk",
+    "runtime-version": "1.6",
+    "sdk-extensions": [],
+    "separate-locales": false,
+    "cleanup": [ "/share/info", "/share/man" ],
+    "build-options" : {
+        "prefix": "/usr/share/runtime"
+    },
+    "modules": [
+        {
+            "name": "paper",
+            "cleanup": [],
+            "config-opts": [
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/snwh/paper-icon-theme/archive/v1.4.0.tar.gz",
+                    "sha256": "b90f3a84634572bcba76cdd0c2a0d305a5c521c2054d3d390edffda5f233928b"
+                },
+                 {
+                     "type": "shell",
+                     "commands": [
+                         "sed -i s@/usr/share@\\\$\\\(datadir\\\)@ Makefile.am"
+                     ]
+                 }
+            ]
+        }
+    ]
+}
