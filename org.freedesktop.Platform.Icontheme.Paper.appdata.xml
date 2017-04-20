@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+  <id>org.freedesktop.Platform.Icontheme.Paper</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>Paper icon theme</name>
+  <summary>Paper icon theme</summary>
+  <description>
+    <p>
+      Paper is a modern freedesktop icon theme whose design is based
+      around the use of bold colours and simple geometric shapes to
+      compose icons. Each icon has been meticulously designed for
+      pixel-perfect viewing.
+    </p>
+  </description>
+  <url type="homepage">https://snwh.org/paper/</url>
+</component>

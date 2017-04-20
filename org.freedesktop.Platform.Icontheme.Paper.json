@@ -8,15 +8,13 @@
     "sdk-extensions": [],
     "separate-locales": false,
     "cleanup": [ "/share/info", "/share/man" ],
+    "appstream-compose": false,
     "build-options" : {
         "prefix": "/usr/share/runtime"
     },
     "modules": [
         {
             "name": "paper",
-            "cleanup": [],
-            "config-opts": [
-            ],
             "sources": [
                 {
                     "type": "archive",
@@ -26,6 +24,21 @@
                 {
                     "type": "patch",
                     "path": "datadir.patch"
+                }
+            ]
+        },
+        {
+            "name": "appdata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p ${FLATPAK_DEST}/share/appdata",
+                "cp org.freedesktop.Platform.Icontheme.Paper.appdata.xml ${FLATPAK_DEST}/share/appdata",
+                "appstream-compose --basename=org.freedesktop.Platform.Icontheme.Paper --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.Platform.Icontheme.Paper"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "org.freedesktop.Platform.Icontheme.Paper.appdata.xml"
                 }
             ]
         }
