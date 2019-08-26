@@ -12,4 +12,4 @@ diff -up paper-2/Makefile.am.datadir paper-2/Makefile.am
  
  uninstall-hook:
 -	test -e $(DESTDIR)/usr/share/icons/Paper && rm -rfv $(DESTDIR)/usr/share/icons/Paper
-+	test -e $(DESTDIR)$(datadir)/icons/Paper && rm -rfv $(DESTDIR)/usr/share/icons/Paper
++	test -e $(DESTDIR)$(datadir)/icons/Paper && rm -rfv $(DESTDIR)$(datadir)/icons/Paper
